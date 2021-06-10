@@ -13,7 +13,7 @@ package LinkedList;
  * - 如果两个链表没有公共部分, 那么两个指针最终会停在末尾的null处
  */
 
-public class leetcode_160 {
+class leetcode_160 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;
         ListNode a = headA;
