@@ -4,7 +4,7 @@ package Tree;
  * 
  * 简单的中序遍历, 只是空间可以再优化
  */
-public class leetcode_897 {
+class leetcode_897 {
 
     TreeNode res = null;
     TreeNode pre = null;

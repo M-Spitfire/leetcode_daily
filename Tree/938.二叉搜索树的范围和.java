@@ -4,7 +4,7 @@ package Tree;
  * 
  * 简单的中序遍历题
  */
-public class leetcode_938 {
+class leetcode_938 {
 
     public int rangeSumBST(TreeNode root, int low, int high) {
         if(root == null)return 0;
