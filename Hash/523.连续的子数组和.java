@@ -6,7 +6,7 @@ import java.util.Set;
  * 本题虽然同时使用了动态规划和哈希表, 但其实非常简单
  * 我觉得在本题中哈希表的思路更加重要, 而前缀和的使用是非常自然应该想到的
  */
-public class leetcode_523 {
+class leetcode_523 {
     // 暴力法显然超时
     // public static boolean checkSubarraySum(int[] nums, int k) {
     //     int len = nums.length;
