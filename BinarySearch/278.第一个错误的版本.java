@@ -27,8 +27,13 @@ class Solution{
         return right;
     }
 
-    // 由于没法知道定义在父类VersionControl中的方法isBadVersion的具体实现
-    // 所以这里取消继承VersionControl, 并写一个无意义的同名方法消除报错
+    /**
+     * 由于没法知道定义在父类VersionControl中的方法isBadVersion的具体实现
+     * 所以这里取消继承VersionControl, 并写一个无意义的同名方法消除报错
+     * [WARN]:
+     * 如果使用vscode写, 不要再写下面这个方法了, 忍受一下红线直接提交吧
+     * 如果你和我一样无法接受红线出现在没有问题的代码里, 那就写一个下面的函数, 但是提交就要把上面的代码复制到网页上去提交了
+     */
     public boolean isBadVersion(int n){
         return true;
     }
