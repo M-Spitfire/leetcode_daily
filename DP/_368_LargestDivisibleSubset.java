@@ -15,7 +15,7 @@ import java.util.List;
  * 3. 状态转移方程: dp[i] = 1 + max(dp[j]), 其中 0 <= j < i
  * 4. 从后往前遍历dp数组, 根据能否整除和dp[i]的值就能确定最终结果
  */
-public class _363_LargestDivisibleSubset {
+public class _368_LargestDivisibleSubset {
     public static List<Integer> largestDivisibleSubset(int[] nums) {
         int dp[] = new int[nums.length];
         Arrays.fill(dp, 1);
