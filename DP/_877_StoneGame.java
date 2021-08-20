@@ -6,8 +6,7 @@ package DP;
  * 在486的基础上增加了一些限制条件，虽然可以用相同的dp思路解体，但最为486的特殊情况，可以有更快的方式
  */
 
-// @lc code=start
-class Solution {
+public class _877_StoneGame {
     /**
      * 采用486的dp思路，完全相同
      * 需要注意的是，本题题目确定不会出现平局，所以最后的判断上不用等号
@@ -40,5 +39,4 @@ class Solution {
         return true;
     }
 }
-// @lc code=end
 
