@@ -1,4 +1,4 @@
-/*
+package DP;/*
  * @lc app=leetcode.cn id=279 lang=java
  *
  * [279] 完全平方数
@@ -9,8 +9,7 @@
  * 又比动态规划块上一个量级
  */
 
-// @lc code=start
-class Solution {
+public class _279_PerfectSquare {
     /**
      * 注意到在这种动态规划方式中, 当前需要计算的行只与上一行的数据有关, 显然可以对空间进行优化
      */
@@ -22,7 +21,7 @@ class Solution {
     //     }
     //     /**
     //      * dp[i][j]: 在square[]的前i个数字种选出若干个(可重复使用), 使的它们的和为j的数字的最小数量
-    //      * 
+    //      *
     //      * 定义好dp数组后, 状态转移方程就不难写出来了, 这里就不写了
     //      */
     //     int[][] dp = new int[len + 1][n + 1];
@@ -49,12 +48,12 @@ class Solution {
         int len = (int) Math.sqrt(n);
         /**
          * dp[i]: 找到n个完全平方数, 使的它们的和为j. 找到n的最小值
-         * 
+         *
          * 初始化:
          * 每个数a都能用a个1加出来
-         * 
+         *
          * 状态转移方程:应该不难找出, 略
-         * 
+         *
          */
         int[] dp = new int[n + 1];
         for(int i = 1; i <= n; i++){
@@ -68,11 +67,5 @@ class Solution {
         }
         return dp[n];
     }
-
-    public static void main(String[] args) {
-        int res = numSquares(12);
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
