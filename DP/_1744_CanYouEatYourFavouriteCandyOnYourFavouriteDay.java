@@ -9,9 +9,8 @@ package DP;
  * [注意]:本题的数字会非常大, 不能用int, 要用long
  */
 
-class leetcode_1744 {
-
-    public static boolean[] canEat(int[] candiesCount, int[][] queries) {
+public class _1744_CanYouEatYourFavouriteCandyOnYourFavouriteDay {
+    public boolean[] canEat(int[] candiesCount, int[][] queries) {
         int len = queries.length;
         boolean[] res = new boolean[len];
         int len2 = candiesCount.length;
@@ -29,29 +28,6 @@ class leetcode_1744 {
             res[i] = (t1 > low) && (t2 < high);
         }
         return res;
-    }
-
-    public static void main(String[] args) {
-        int[] candiesCount = {5,2,6,4,1};
-        int[][] queries = {
-            {3,1,2},
-            {4,10,3},
-            {3,10,100},
-            {4,100,30},
-            {1,3,1}
-        };
-        canEat(candiesCount, queries);
-    }
-
-    /**
-     * 泛型函数打印数组
-     * 接收的数组是Integer, Boolean等引用数据类型, 基本数据类型是不行的, 需要转换
-     */
-    public static <T> void printArray(T[] array){
-        for(int i = 0; i < array.length; i++){
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
     }
 }
 
