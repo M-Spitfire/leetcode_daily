@@ -8,8 +8,7 @@ import java.util.Arrays;
  * 贪心问题, 与背包问题非常相似, 但是本题选取的顺序可以是任意的, 因此用贪心做是更加简单明了的方式
  */
 
-// @lc code=start
-class Solution {
+public class _1833_MaximumIceCreamBars {
     public int maxIceCream(int[] costs, int coins) {
         Arrays.sort(costs);
         int c = 0;
@@ -26,5 +25,4 @@ class Solution {
         return res;
     }
 }
-// @lc code=end
 
