@@ -12,17 +12,17 @@ import java.util.Map;
  * 为了在birth()时快速找到父亲节点, 使用一个哈希表存储每一个节点
  */
 
-// @lc code=start
-class ThroneInheritance {
+public class _1600_ThroneInheritance {
     private KingdomMumber root;
     private Map<String, KingdomMumber> members;
 
-    public ThroneInheritance(String kingName) {
+    //为了统一的命名, 这里的构造方法名没有按照leetcode上的来, 注意一下
+    public _1600_ThroneInheritance(String kingName) {
         root = new KingdomMumber(kingName);
         members = new HashMap<>();
         members.put(kingName, root);
     }
-    
+
     public void birth(String parentName, String childName) {
         KingdomMumber parent = members.get(parentName);
         KingdomMumber child = new KingdomMumber(childName);
@@ -36,11 +36,11 @@ class ThroneInheritance {
         }
         members.put(childName, child);
     }
-    
+
     public void death(String name) {
         members.get(name).isdead = true;
     }
-    
+
     public List<String> getInheritanceOrder() {
         List<String> order = new ArrayList<>();
         preOrderVisit(root, order);
@@ -79,5 +79,4 @@ class ThroneInheritance {
  * obj.death(name);
  * List<String> param_3 = obj.getInheritanceOrder();
  */
-// @lc code=end
 
