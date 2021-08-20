@@ -5,28 +5,27 @@ package DP;
  *
  * [1449] 数位成本和为目标值的最大数字
  * 
- * 看了一下官方题解, dp[i]只是记录cost总和为i的最大整数的位数, 若最终dp[taregt]<0,则说明不存在(初始化＜0)
+ * 看了一下官方题解, dp[i]只是记录cost总和为i的最大整数的位数, 若最终dp[target]<0,则说明不存在(初始化＜0)
  * 得到dp数组后, 从最后一位开始往前遍历, 根据位数信息和cost信息, 找到每一位的数字, 拼接出最终结果
  * 
  * 这种方式明显是比我的方式更快的, 因为减少了大量的字符串拼接操作
  */
 
-// @lc code=start
-class Solution {
-    public static String largestNumber(int[] cost, int target) {
+public class _1449_FromLargestIntegerWithDigitsThatAddUpToTarget {
+    public String largestNumber(int[] cost, int target) {
         /**
          * dp[i]:在满足cost总和等于i的条件下, 使用整数1~n组成的最大整数
          *          这个n的取值就是第一层循环, 从1~9依次进行
-         * 
+         *
          * 状态转移方程:
          * 1. cost[i - 1] > target:(当前数字不可能在结果种出现)
          *      保持现状即可, 不需要改变什么
          * 2. cost[i - 1] <= target:
          *      dp[i] = max{dp[i], n + dp[i - cost[i - 1]]}
          *      n拼接到dp[i - cost[i - 1]]的最高位, 并与dp[i]比较取最大值
-         * 
+         *
          * 还有诸多小细节, 在代码注释中解释
-         *      
+         *
          */
         StringBuilder[] dp = new StringBuilder[target + 1];
         for(int i = 1; i < 10; i++){
@@ -70,19 +69,5 @@ class Solution {
         }
         return dp[target] == null ? "0" :dp[target].toString();
     }
-    public static void print(StringBuilder[] array){
-        for(int i = 0; i < array.length; i++){
-            String out = array[i] == null ? "null" : array[i].toString();
-            System.out.println(i + ": " + out);
-        }
-        System.out.println("==============================");
-    }
-
-    public static void main(String[] args) {
-        int[] cost = {4,3,2,5,6,7,2,5,5};
-        String res = largestNumber(cost, 9);
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
