@@ -8,9 +8,8 @@ package Hash;
  * 滑动窗口更快, 但是没有哈希表来的简单直观
  */
 
-// @lc code=start
-class Solution {
-    public static int numSubarraysWithSum(int[] nums, int goal) {
+public class _930_BinarySubArraysWithSum {
+    public int numSubarraysWithSum(int[] nums, int goal) {
         int res = 0;
         int len = nums.length;
         int[] map = new int[len + 1];
@@ -26,12 +25,5 @@ class Solution {
         }
         return res;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {0,0,0,0,0};
-        int res = numSubarraysWithSum(nums, 0);
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
