@@ -10,9 +10,8 @@ package Hash;
  * 数组使用更多的空间, 但是速度上会快很多, Map则是空间上更加节省而速度慢一些
  */
 
-// @lc code=start
-class Solution {
-    public static int countPairs(int[] deliciousness) {
+public class _1711_CountGoodMeals {
+    public int countPairs(int[] deliciousness) {
         final int MOD = 1000000007;
         int maxVal = 0;
         int minVal = Integer.MAX_VALUE;
@@ -39,12 +38,5 @@ class Solution {
         }
         return pairs;
     }
-
-    public static void main(String[] args) {
-        int[] nums = {1,3,5,7,9,8,7,6,5,4,3,2};
-        int res = countPairs(nums);
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
