@@ -9,8 +9,7 @@ import java.util.TreeSet;
  *      在一维数组中寻找一个连续的序列(长度至少为1), 使序列中的数字的和(记为ans)最大且ans <= k
  *      这实际上就是转化成一维数组前缀和的问题, 这是最简单的动态规划了
  */
-class leetcode_363 {
-
+public class _363_MaxSumOfRectangleNoLargerThanK {
     public int maxSumSubmatrix(int[][] matrix, int k) {
         int ans = Integer.MIN_VALUE;
         int m = matrix.length;
@@ -37,9 +36,5 @@ class leetcode_363 {
         }
 
         return ans;
-    }
-
-    public static void main(String[] args) {
-        
     }
 }
