@@ -3,8 +3,7 @@ package DP;
 /**
  * 完全背包问题, 动态规划
  */
-class leetcode_518 {
-
+public class _518_CoinChange2 {
     /**
      * 没有优化空间的写法
      */
@@ -12,10 +11,10 @@ class leetcode_518 {
     //     int len = coins.length;
     //     /**
     //      * dp[i][j]:使用前i种硬币(每种硬币的个数任意)凑出j元的方案的数量
-    //      * 
+    //      *
     //      * 初始化:
     //      * dp[0][0] = 1
-    //      * 
+    //      *
     //      * 状态转移方程:
     //      * 1. 当前硬币不可能是结果中的一员(coins[i] > amount)
     //      *      dp[i][j] = dp[i - 1][j]
@@ -50,10 +49,10 @@ class leetcode_518 {
     public static int change(int amount, int[] coins) {
         /**
          * dp[i]:硬币总和为i的方案数
-         * 
+         *
          * 初始化:dp[0] = 1
          * 不选择任何硬币就能完成总和为0的目标
-         * 
+         *
          * 状态转移方程:
          * 一种coin就代表我们一次能走的步数, 每一种可能都要加上
          * for(int coin : coins){
@@ -80,9 +79,4 @@ class leetcode_518 {
 
         return dp[amount];
     }
-
-    public static void main(String[] args) {
-        
-    }
-    
 }
