@@ -15,8 +15,7 @@ import java.util.List;
  * 3. 状态转移方程: dp[i] = 1 + max(dp[j]), 其中 0 <= j < i
  * 4. 从后往前遍历dp数组, 根据能否整除和dp[i]的值就能确定最终结果
  */
-class leetcode_368 {
-
+public class _363_LargestDivisibleSubset {
     public static List<Integer> largestDivisibleSubset(int[] nums) {
         int dp[] = new int[nums.length];
         Arrays.fill(dp, 1);
@@ -73,25 +72,4 @@ class leetcode_368 {
 
         return res;
     }
-
-    public static void main(String[] args) {
-        int nums[] = {4,8,10,240};
-        List<Integer> res = largestDivisibleSubset(nums);
-        printList(res);
-    }
-
-    public static void printArray(int nums[]){
-        for(int n : nums){
-            System.out.print(n + "\t");
-        }
-        System.out.println();
-    }
-
-    public static void printList(List<Integer> nums){
-        for(int n : nums){
-            System.out.print(n + "\t");
-        }
-        System.out.println();
-    }
-    
 }
