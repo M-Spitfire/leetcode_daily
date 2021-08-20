@@ -6,11 +6,10 @@ package String;
  * 这个题目虽然标为困难，但是实际上直接硬模拟就行，在速度上不会比官方题解使用的状态机慢的
  */
 
-// @lc code=start
-class Solution {
+public class _65_ValidNumber {
     public boolean isNumber(String s) {
         int index = s.indexOf('e');
-        boolean isE = true;
+        boolean isE;
         if(index == -1){
             index = s.indexOf('E');
             isE = index == s.lastIndexOf('E');
@@ -25,7 +24,7 @@ class Solution {
                 String str1 = s.substring(0, index);
                 String str2 = s.substring(index + 1);
                 return (isInteger(str1) || isDecimal(str1)) && isInteger(str2);
-            }   
+            }
         }
     }
 
@@ -78,5 +77,4 @@ class Solution {
         System.out.println(isInteger(s));
     }
 }
-// @lc code=end
 
