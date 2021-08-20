@@ -30,8 +30,7 @@ package Math;
  * 如果验证成功，直接返回k，如果所有都不行，返回n - 1(n在n-1进制下的表示为11，必定正确，但题目要求进制数尽量小)
  */
 
-// @lc code=start
-class Solution {
+public class _483_SmallestGoodBase {
     public String smallestGoodBase(String n) {
         long realN = Long.parseLong(n);
         //最小进制为2。用了一下换底公式
@@ -49,5 +48,4 @@ class Solution {
         return Long.toString(realN - 1);
     }
 }
-// @lc code=end
 
