@@ -19,8 +19,7 @@ import java.util.Set;
  *      ②使用桶排序的思想, 但是这个了解不多, 在这里就不多说了
  */
 
-// @lc code=start
-class Solution {
+public class _451_SortCharactersByFrequency {
     public String frequencySort(String s) {
         Map<Integer, Set<Character>> counter = new HashMap<>();
         Map<Character, Integer> map = new HashMap<>();
@@ -48,5 +47,4 @@ class Solution {
         return sb.toString();
     }
 }
-// @lc code=end
 
