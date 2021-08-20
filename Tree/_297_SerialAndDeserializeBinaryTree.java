@@ -7,9 +7,8 @@ package Tree;
  * 反序列化实际上也是进行了一次前序遍历, 在便利的过程中将所有节点创建好
  */
 
-// @lc code=start
-class Codec {
-
+// 为了统一的命名, 类名没有遵循Leetcode的要求将类命名为Codec
+public class _297_SerialAndDeserializeBinaryTree {
     String[] nodes = null;
     int index = 0;
 
@@ -27,7 +26,7 @@ class Codec {
             return;
         }
 
-        sb.append(root.val + "/");
+        sb.append(root.val).append("/");
         preOrder(root.left, sb);
         preOrder(root.right, sb);
     }
@@ -36,18 +35,17 @@ class Codec {
     public TreeNode deserialize(String data) {
         nodes = data.split("/");
         if(nodes.length == 0)return null;
-        TreeNode root = build();
-        return root;
+        return build();
     }
 
     public TreeNode build(){
-        
+
         if(index >= nodes.length || "[]".equals(nodes[index])){
             index++;
             return null;
         }
-        
-        TreeNode root = new TreeNode(Integer.valueOf(nodes[index++]));
+
+        TreeNode root = new TreeNode(Integer.parseInt(nodes[index++]));
         root.left = build();
         root.right = build();
         return root;
@@ -58,5 +56,4 @@ class Codec {
 // Codec ser = new Codec();
 // Codec deser = new Codec();
 // TreeNode ans = deser.deserialize(ser.serialize(root));
-// @lc code=end
 
