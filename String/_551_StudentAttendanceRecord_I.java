@@ -7,7 +7,7 @@ package String;
 
 public class _551_StudentAttendanceRecord_I {
     public boolean checkRecord(String s) {
-        return s.indexOf("A") == s.lastIndexOf("A") && s.indexOf("LLL") == -1;
+        return s.indexOf("A") == s.lastIndexOf("A") && !s.contains("LLL");
     }
 }
 
