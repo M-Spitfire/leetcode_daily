@@ -10,7 +10,7 @@ package DP;
  * 在stones中的各个值的前面填上＋或-形成一个算式, 使得算是的结果res最小且res为非负数(一直都是大的减小的, 不可能为负)
  * 
  * 
- * 这样, 本题也就转化成了和494差不多的题目, 顺利成章的使用0-1背包的思路即可解决
+ * 这样, 本题也就转化成了和494差不多的题目, 顺理成章的使用0-1背包的思路即可解决
  * 题意等价于: 将给定集合stones拆分成两个集合A和B, sum(A) - sum(B) = diff, 使得diff最小
  *              其中 stones = A + B
  *                  sum(P) = sum(A) + sum(B)
@@ -21,8 +21,7 @@ package DP;
  * 就是要求找到stones的子集B, 使得2 * sum(B) <= sum(stones)且sum(stones)尽可能大
  * 这样问题就可以使用0-1背包解决了
  */
-class leetcode_1049 {
-
+public class _1040_MovingStonesUntilConsecutiveII {
     public int lastStoneWeightII(int[] stones) {
         int len = stones.length;
         int sum = 0;
@@ -53,9 +52,5 @@ class leetcode_1049 {
         }
 
         return sum - 2 * dp[len][target];
-    }
-
-    public static void main(String[] args) {
-        
     }
 }
