@@ -2,8 +2,8 @@ package LinkedList;
 /**
  * 在链表中移除指定的元素
  */
-class leetcode_203 {
 
+public class _203_RemoveLinkedListElements {
     public ListNode removeElements(ListNode head, int val) {
         ListNode res = new ListNode();
         ListNode point = res;
@@ -20,10 +20,6 @@ class leetcode_203 {
         }
 
         return res.next;
-    }
-
-    public static void main(String[] args) {
-        System.out.println();
     }
 
     class ListNode {
