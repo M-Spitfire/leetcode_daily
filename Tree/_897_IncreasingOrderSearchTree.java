@@ -4,8 +4,7 @@ package Tree;
  * 
  * 简单的中序遍历, 只是空间可以再优化
  */
-class leetcode_897 {
-
+public class _897_IncreasingOrderSearchTree {
     TreeNode res = null;
     TreeNode pre = null;
     public TreeNode increasingBST(TreeNode root) {
@@ -13,7 +12,7 @@ class leetcode_897 {
 
         TreeNode left = root.left;
         TreeNode right = root.right;
-        
+
         //遍历左子树
         increasingBST(left);
         //处理根节点
