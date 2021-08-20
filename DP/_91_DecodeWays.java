@@ -5,10 +5,9 @@ package DP;
  * 当然也可以看成是动态规划的思路
  */
 
-class leetcode_91 {
-
-    public static int numberDecoding(String s){
-        char chs[] = s.toCharArray();
+public class _91_DecodeWays {
+    public int numberDecoding(String s){
+        char[] chs = s.toCharArray();
         int pre = 0;
         int res = 1;
         int temp = 0;
@@ -21,7 +20,7 @@ class leetcode_91 {
 
             //当成二位数字的后一位
             if(i == 0 || chs[i - 1] == '1' ||
-                (chs[i] >= '0' && chs[i] <= '6' && chs[i - 1] == '2')){
+                    (chs[i] >= '0' && chs[i] <= '6' && chs[i - 1] == '2')){
                 temp += pre;
             }
 
@@ -36,10 +35,5 @@ class leetcode_91 {
         }
 
         return res;
-    } 
-
-    public static void main(String[] args) {
-       String str = "132132";
-       System.out.println(numberDecoding(str));
-    } 
+    }
 }
