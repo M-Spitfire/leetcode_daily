@@ -15,8 +15,7 @@ import java.util.Arrays;
  *      经典空间换时间
  */
 
-// @lc code=start
-class Solution {
+public class _36_ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
         int[] count = new int[10];
         //检查行
@@ -58,5 +57,4 @@ class Solution {
         return true;
     }
 }
-// @lc code=end
 
