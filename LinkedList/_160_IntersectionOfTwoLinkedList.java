@@ -13,7 +13,7 @@ package LinkedList;
  * - 如果两个链表没有公共部分, 那么两个指针最终会停在末尾的null处
  */
 
-class leetcode_160 {
+public class _160_IntersectionOfTwoLinkedList {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if(headA == null || headB == null) return null;
         ListNode a = headA;
@@ -27,11 +27,7 @@ class leetcode_160 {
         }
 
         //出循环时两个指针一定相等, 返回任意一个即可
-        return a; 
-    }
-
-    public static void main(String[] args) {
-        
+        return a;
     }
 }
 
