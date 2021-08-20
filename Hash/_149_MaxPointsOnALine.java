@@ -3,16 +3,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-
 /*
  * @lc app=leetcode.cn id=149 lang=java
  *
  * [149] 直线上最多的点数
  */
 
-// @lc code=start
-class Solution {
-    public static int maxPoints(int[][] points) {
+public class _149_MaxPointsOnALine {
+    public int maxPoints(int[][] points) {
         if(points.length < 3)return points.length;
         int res = 0;
         /**
@@ -54,7 +52,7 @@ class Solution {
         return res;
     }
 
-    public static int gcd(int a, int b){
+    public int gcd(int a, int b){
         //保证a是更大的那一个
         if(a < b){
             int temp = a;
@@ -68,21 +66,7 @@ class Solution {
         }
         return a;
     }
-
-    public static void main(String[] args) {
-        int[][] points = {
-            {1,1},
-            {3,2},
-            {5,3},
-            {4,1},
-            {2,3},
-            {1,4}
-        };
-        int n = maxPoints(points);
-        System.out.println(n);
-    }
 }
-// @lc code=end
 // {1,1},
 // {2,2},
 // {3,3}
