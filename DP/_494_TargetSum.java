@@ -11,9 +11,8 @@ package DP;
  * 
  * 因此问题转换成从集合P中找到一个子集, 使子集的和等于sum(B)
  */
-class leetcode_494 {
-
-    public static int findTargetSumWays(int[] nums, int target) {
+public class _494_TargetSum {
+    public int findTargetSumWays(int[] nums, int target) {
         int len = nums.length;
         int sum = 0;
         for(int n : nums){
@@ -43,24 +42,7 @@ class leetcode_494 {
                 }
             }
         }
-        print(dp);
 
         return dp[len][realTarget];
     }
-
-    public static void print(int[][] array){
-        for(int[] t : array){
-            for(int n : t){
-                System.out.print(n + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    public static void main(String[] args) {
-        int[] nums = {1,0};
-        int res = findTargetSumWays(nums, 1);
-        System.out.println(res);
-    }
-    
 }
