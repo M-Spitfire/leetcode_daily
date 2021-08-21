@@ -1,10 +1,5 @@
 package BFS;
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /*
  * @lc app=leetcode.cn id=752 lang=java
@@ -16,18 +11,15 @@ import java.util.Set;
  * 如果两边没有相遇, 说明不存在能够从起点到终点的变换
  */
 
-// @lc code=start
-class Solution {
-    static Set<String> set = new HashSet<>();
-    static String s, t;
-    public static int openLock(String[] deadends, String target) {
+public class _752_OpenTheLock {
+    Set<String> set = new HashSet<>();
+    String s, t;
+    public int openLock(String[] deadends, String target) {
         s = "0000";
         t = target;
         // 如果目标字符串就是"0000", 那么不用任何操作就到达了目标
         if(s.equals(target))return 0;
-        for(String str : deadends){
-            set.add(str);
-        }
+        set.addAll(Arrays.asList(deadends));
         // 如果起始字符串是"deadends"的成员, 那么不可能到达目标字符串
         if(set.contains(s))return -1;
 
@@ -35,7 +27,7 @@ class Solution {
     }
 
     //双向广度优先搜索, 避免空间复杂度的指数上升
-    public static int bfs(){
+    public int bfs(){
         Deque<String> d1 = new ArrayDeque<>();
         Deque<String> d2 = new ArrayDeque<>();
         Map<String, Integer> m1 = new HashMap<>();
@@ -46,7 +38,7 @@ class Solution {
         m2.put(t, 0);
 
         while(!d1.isEmpty() && !d2.isEmpty()){
-            int t = -1;
+            int t;
             if(d1.size() < d2.size()){
                 t = update(d1, m1, m2);
             }
@@ -59,10 +51,10 @@ class Solution {
         return -1;
     }
 
-    public static int update(Deque<String> queue, Map<String, Integer> cur, Map<String, Integer> others){
+    public int update(Deque<String> queue, Map<String, Integer> cur, Map<String, Integer> others){
         String str1 = queue.removeFirst();
         int steps = cur.get(str1);
-        char[] chs = str1.toCharArray();    
+        char[] chs = str1.toCharArray();
 
         for(int i = 0; i < 4; i++){
             char ch = chs[i];
@@ -91,12 +83,5 @@ class Solution {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        String[] arr = {"1131","1303","3113","0132","1301","1303","2200","0232","0020","2223"};
-        int res = openLock(arr, "3312");
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
