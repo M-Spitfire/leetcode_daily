@@ -8,8 +8,7 @@ package BitManipulation;
  * 1. 除二取余法
  * 2. 库函数:Integer.bitCount(int)
  */
-class leetcode_477 {
-
+public class _477_TotalHammingDistance {
     // 暴力法, 超时
     // public int totalHammingDistance(int[] nums) {
     //     int count = 0;
@@ -43,8 +42,5 @@ class leetcode_477 {
             res += count * (len - count);
         }
         return res;
-    }
-
-    public static void main(String[] args) {
     }
 }
