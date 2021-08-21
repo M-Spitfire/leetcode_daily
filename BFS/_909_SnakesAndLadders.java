@@ -12,8 +12,7 @@ import java.util.Set;
  * 我这里将二维数组转换成一维数组, 这样在数组里的"传送"(不管是梯子还是蛇都是传送)就会方便很多
  */
 
-// @lc code=start
-class Solution {
+public class _909_SnakesAndLadders {
     public static int snakesAndLadders(int[][] board) {
         int n = board[0].length;
         int target = n * n;
@@ -65,17 +64,5 @@ class Solution {
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        int[][] board = {
-            {-1,-1,-1},
-            {-1,9,8},
-            {-1,8,9}
-        };
-        
-        int res = snakesAndLadders(board);
-        System.out.println(res);
-    }
 }
-// @lc code=end
 
