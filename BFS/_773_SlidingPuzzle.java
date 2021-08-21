@@ -14,8 +14,7 @@ import java.util.Set;
  * 可以考虑使用双向广度优先搜索, 这题的数据量比较小, 这里就不用了
  */
 
-// @lc code=start
-class Solution {
+public class _773_SlidingPuzzle {
     public int slidingPuzzle(int[][] board) {
         Deque<String> queue = new ArrayDeque<>();
         Deque<Integer> indexQueue = new ArrayDeque<>();
@@ -33,12 +32,12 @@ class Solution {
             }
         }
         int[][] changeMap = {
-            {1,3,-1},
-            {0,2,4},
-            {1,5,-1},
-            {0,4,-1},
-            {1,3,5},
-            {2,4,-1}
+                {1,3,-1},
+                {0,2,4},
+                {1,5,-1},
+                {0,4,-1},
+                {1,3,5},
+                {2,4,-1}
         };
         String start = sb.toString();
         if(target.equals(start))return 0;
@@ -70,15 +69,10 @@ class Solution {
                         indexQueue.add(changeTarget);
                     }
                 }
-                
+
             }
         }
 
         return -1;
     }
 }
-// @lc code=end
-// 012
-// 345
-
-// 012345
