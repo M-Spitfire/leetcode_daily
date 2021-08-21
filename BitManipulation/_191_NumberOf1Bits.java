@@ -7,12 +7,10 @@ package BitManipulation;
  * 注意: 题目的示例中00000000000000000000000000001011, 由于第一位是0, 所以Java默认会按照八进制来解析
  */
 
-// @lc code=start
-class Solution {
+public class _191_NumberOf1Bits {
     // you need to treat n as an unsigned value
     public static int hammingWeight(int n) {
         return Integer.bitCount(n);
     }
 }
-// @lc code=end
 
