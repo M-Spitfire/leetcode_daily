@@ -23,11 +23,9 @@ import java.util.List;
  * 5:[59,55,47,31]
  */
 
-// @lc code=start
-class Solution {
+public class _401_BinaryWatch {
     public List<String> readBinaryWatch(int turnedOn) {
         return null;
     }
 }
-// @lc code=end
 
