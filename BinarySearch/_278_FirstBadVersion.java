@@ -11,7 +11,7 @@ package BinarySearch;
 /* The isBadVersion API is defined in the parent class VersionControl.
       boolean isBadVersion(int version); */
 
-class Solution{
+public class _278_FirstBadVersion {
     public int firstBadVersion(int n) {
         int left = 1;
         int right = n;
@@ -38,5 +38,4 @@ class Solution{
         return true;
     }
 }
-// @lc code=end
 

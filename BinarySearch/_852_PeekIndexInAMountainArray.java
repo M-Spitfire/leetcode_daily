@@ -10,8 +10,7 @@ package BinarySearch;
  * 因此我们只需要验证左边是否一直增大或者右边依次减小就可以了
  */
 
-// @lc code=start
-class Solution {
+public class _852_PeekIndexInAMountainArray {
     public int peakIndexInMountainArray(int[] arr) {
         int left = 0;
         int right = arr.length - 1;
@@ -33,5 +32,4 @@ class Solution {
         return left;
     }
 }
-// @lc code=end
 
